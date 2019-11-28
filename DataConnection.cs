@@ -18,7 +18,7 @@ namespace MyContactsApp
         public DataConnection()
         {
             //sql data source location and name (window authentication)
-            conStr = @"Data Source=LAPTOP-M9SUKVQF\SQLEXPRESS;Initial Catalog='Contacts Database';Integrated Security=True";
+            conStr = @"Data Source=den1.mssql7.gear.host;Initial Catalog='mycontactsapp'; UID=mycontactsapp; PWD=Qq4XJK6-w!cj;";
 
 
     }
