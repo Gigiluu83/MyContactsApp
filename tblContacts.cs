@@ -13,6 +13,7 @@ namespace MyContactsApp
     //Contacts table class
     class tblContacts
     {
+        //auto properties
             public int ID { get; set; }
             public string FirstName { get; set; }
             public string PhoneNumber { get; set;  }

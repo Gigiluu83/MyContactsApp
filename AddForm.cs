@@ -25,9 +25,11 @@ namespace MyContactsApp
 
         public bool CheckData()
         {
+            //check to make sure FirstName field is not empty
             if (string.IsNullOrEmpty(txtFirstName.Text))
 
             {
+                //if FirstName field is empty, then show this message box
                 MessageBox.Show("You have not put in a FirstName", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtFirstName.Focus();
                 return false;
@@ -54,6 +56,7 @@ namespace MyContactsApp
                 }
                 //close addform
                 this.Close();
+                //show successful message box
                 MessageBox.Show("Added Successfully!");
                 
             }

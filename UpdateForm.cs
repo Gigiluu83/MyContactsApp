@@ -27,8 +27,12 @@ namespace MyContactsApp
         public void button1_Click_1(object sender, EventArgs e)
         {
             //update contact info
-                DialogResult = DialogResult.OK;
+            DialogResult = DialogResult.OK;
+
+            //close Update Form
             this.Close();
+
+            //show message that contact has been udpated successfully
             MessageBox.Show("Updated Successfully!");
             
 

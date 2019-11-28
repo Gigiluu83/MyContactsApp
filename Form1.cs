@@ -39,15 +39,19 @@ namespace MyContactsApp
         {
             ShowAllContacts();
 
+            //show "add new contact" when mouse hovers Add Button
             System.Windows.Forms.ToolTip toolTip1 = new System.Windows.Forms.ToolTip();
             toolTip1.SetToolTip(this.btnAdd, "Add New Contact");
 
+            //show "Delete Contact" when mouse hovers Delete Button
             System.Windows.Forms.ToolTip toolTip2 = new System.Windows.Forms.ToolTip();
             toolTip2.SetToolTip(this.btnDelete, "Delete Contact");
 
+            //show "Update Contect" when mouse hovers Update Button
             System.Windows.Forms.ToolTip toolTip3 = new System.Windows.Forms.ToolTip();
             toolTip3.SetToolTip(this.Update, "Update Contact");
-
+            
+            //show "Export to Excel" when mouse hovers Export Button
             System.Windows.Forms.ToolTip toolTip4 = new System.Windows.Forms.ToolTip();
             toolTip4.SetToolTip(this.btnExport, "Export to Excel");
 
@@ -57,8 +61,10 @@ namespace MyContactsApp
         {
             using (var addform = new AddForm())
             {
+                //shows Add Form and check if DialogResult is OK
                 if (addform.ShowDialog() == DialogResult.OK)
                 {
+                    //shows all contacts
                     this.ShowAllContacts();
                 }
             }
