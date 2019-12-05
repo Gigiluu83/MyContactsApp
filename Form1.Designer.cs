@@ -34,10 +34,9 @@
             this.Update = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtFind = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnExport = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -90,21 +89,11 @@
             // 
             // txtFind
             // 
-            this.txtFind.Location = new System.Drawing.Point(482, 26);
+            this.txtFind.Location = new System.Drawing.Point(482, 34);
             this.txtFind.Name = "txtFind";
             this.txtFind.Size = new System.Drawing.Size(159, 20);
             this.txtFind.TabIndex = 16;
             this.txtFind.TextChanged += new System.EventHandler(this.txtFind_TextChanged);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(659, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 51);
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
             // 
             // btnExport
             // 
@@ -117,6 +106,15 @@
             this.btnExport.UseVisualStyleBackColor = true;
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(479, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 13);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Filter by First/Last Name";
+            // 
             // MyContactsApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -124,8 +122,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExport);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtFind);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Update);
@@ -137,7 +135,6 @@
             this.Text = "My Contacts App";
             this.Load += new System.EventHandler(this.MyContactsApp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,8 +146,8 @@
         private System.Windows.Forms.Button Update;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtFind;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.Label label1;
     }
 }
 

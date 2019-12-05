@@ -80,11 +80,11 @@ namespace MyContactsApp
             if (index >= 0)
             {
                 Id = Int32.Parse(dataGridView1.Rows[index].Cells["ID"].Value.ToString());
-                updateForm.txtFirstName.Text = dataGridView1.Rows[index].Cells["FirstName"].Value.ToString();
-                updateForm.txtLastName.Text = dataGridView1.Rows[index].Cells["LastName"].Value.ToString();
+                updateForm.txtFirstName.Text = dataGridView1.Rows[index].Cells["FirstName"].Value.ToString().ToUpper();
+                updateForm.txtLastName.Text = dataGridView1.Rows[index].Cells["LastName"].Value.ToString().ToUpper();
                 updateForm.txtPhoneNumber.Text = dataGridView1.Rows[index].Cells["PhoneNumber"].Value.ToString();
-                updateForm.txtEmailAddress.Text = dataGridView1.Rows[index].Cells["EmailAddress"].Value.ToString();
-                updateForm.txtAddress.Text = dataGridView1.Rows[index].Cells["Address"].Value.ToString();
+                updateForm.txtEmailAddress.Text = dataGridView1.Rows[index].Cells["EmailAddress"].Value.ToString().ToUpper();
+                updateForm.txtAddress.Text = dataGridView1.Rows[index].Cells["Address"].Value.ToString().ToUpper();
             }
         }
 
@@ -132,7 +132,7 @@ namespace MyContactsApp
         private void txtFind_TextChanged(object sender, EventArgs e)
         {
             //show contact if find text box is not empty
-            string value = txtFind.Text;
+            string value = txtFind.Text.ToUpper();
             if (!string.IsNullOrEmpty(value))
             {
                 System.Data.DataTable dt = bllContact.FindContact(value);

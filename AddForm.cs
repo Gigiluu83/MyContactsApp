@@ -44,11 +44,11 @@ namespace MyContactsApp
           
             {//create a new contact table and include the below info
                 tblContacts ct = new tblContacts();
-                ct.FirstName = txtFirstName.Text;
-                ct.LastName = txtLastName.Text;
+                ct.FirstName = txtFirstName.Text.ToUpper();
+                ct.LastName = txtLastName.Text.ToUpper();
                 ct.PhoneNumber = txtPhoneNumber.Text;
-                ct.EmailAddress = txtEmailAddress.Text;
-                ct.Address = txtAddress.Text;
+                ct.EmailAddress = txtEmailAddress.Text.ToUpper();
+                ct.Address = txtAddress.Text.ToUpper();
                 //insert contact 
                 if (contactBLL.InsertContact(ct))
                 {
