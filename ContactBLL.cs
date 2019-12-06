@@ -20,16 +20,19 @@ namespace MyContactsApp
 
         public DataTable getAllContacts()
         {
+            //return All contacts
             return daContacts.getAllContacts();
         }
 
         public bool InsertContact(tblContacts ct)
         {
+            //return insert contact
             return daContacts.InsertContact(ct);
         }
 
         public bool UpdateContact(tblContacts ct)
         {
+            //return update contact
             return daContacts.UpdateContact(ct);
         }
 
