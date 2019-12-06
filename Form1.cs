@@ -80,11 +80,11 @@ namespace MyContactsApp
             if (index >= 0)
             {
                 Id = Int32.Parse(dataGridView1.Rows[index].Cells["ID"].Value.ToString());
-                updateForm.txtFirstName.Text = dataGridView1.Rows[index].Cells["FirstName"].Value.ToString().ToUpper();
-                updateForm.txtLastName.Text = dataGridView1.Rows[index].Cells["LastName"].Value.ToString().ToUpper();
+                updateForm.txtFirstName.Text = dataGridView1.Rows[index].Cells["FirstName"].Value.ToString();
+                updateForm.txtLastName.Text = dataGridView1.Rows[index].Cells["LastName"].Value.ToString();
                 updateForm.txtPhoneNumber.Text = dataGridView1.Rows[index].Cells["PhoneNumber"].Value.ToString();
-                updateForm.txtEmailAddress.Text = dataGridView1.Rows[index].Cells["EmailAddress"].Value.ToString().ToUpper();
-                updateForm.txtAddress.Text = dataGridView1.Rows[index].Cells["Address"].Value.ToString().ToUpper();
+                updateForm.txtEmailAddress.Text = dataGridView1.Rows[index].Cells["EmailAddress"].Value.ToString();
+                updateForm.txtAddress.Text = dataGridView1.Rows[index].Cells["Address"].Value.ToString();
             }
         }
 
@@ -96,12 +96,12 @@ namespace MyContactsApp
             {
                 tblContacts ct = new tblContacts();
                 ct.ID = Id;
-                ct.FirstName = updateForm.txtFirstName.Text;
-                ct.LastName = updateForm.txtLastName.Text;
+                ct.FirstName = updateForm.txtFirstName.Text.ToUpper();
+                ct.LastName = updateForm.txtLastName.Text.ToUpper();
                 ct.PhoneNumber = updateForm.txtPhoneNumber.Text;
-                ct.Address = updateForm.txtAddress.Text;
-                ct.EmailAddress = updateForm.txtEmailAddress.Text;
-                ct.Address = updateForm.txtAddress.Text;
+                ct.Address = updateForm.txtAddress.Text.ToUpper();
+                ct.EmailAddress = updateForm.txtEmailAddress.Text.ToUpper();
+                ct.Address = updateForm.txtAddress.Text.ToUpper();
                 //update contact info
                 if (bllContact.UpdateContact(ct))
                     //after updating, show new data for all contacts
